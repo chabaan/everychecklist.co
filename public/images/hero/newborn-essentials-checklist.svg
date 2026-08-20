@@ -1,0 +1,13 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+<rect width="800" height="500" rx="0" fill="#F5F6F0"/>
+<rect x="200" y="230" width="260" height="150" rx="20" fill="#E7F0EA" stroke="#2F6F4F" stroke-width="3"/>
+<line x1="200" y1="290" x2="460" y2="290" stroke="#2F6F4F" stroke-width="2" opacity="0.4"/>
+<circle cx="330" cy="180" r="42" fill="#FFFFFF" stroke="#1F4E38" stroke-width="3"/>
+<path d="M300 165 q30 -25 60 0" fill="none" stroke="#1F4E38" stroke-width="3"/>
+<rect x="500" y="290" width="34" height="60" rx="12" fill="#FFD23F"/>
+<circle cx="517" cy="280" r="22" fill="#FFD23F"/>
+<rect x="160" y="420" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#2F6F4F" stroke-width="2.5"/><path d="M165 431 L169 436 L177 426" fill="none" stroke="#2F6F4F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="160" y="460" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#2F6F4F" stroke-width="2.5"/>
+<line x1="192" y1="431" x2="360" y2="431" stroke="#DBDCCF" stroke-width="2" stroke-dasharray="6 6"/>
+<line x1="192" y1="471" x2="320" y2="471" stroke="#DBDCCF" stroke-width="2" stroke-dasharray="6 6"/>
+</svg>

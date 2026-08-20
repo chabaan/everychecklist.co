@@ -1,0 +1,14 @@
+{
+  "name": "everychecklist-site",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/generate-from-sheet.mjs && astro build",
+    "preview": "astro preview",
+    "sync": "node scripts/generate-from-sheet.mjs"
+  },
+  "dependencies": {
+    "astro": "^4.16.0"
+  }
+}
