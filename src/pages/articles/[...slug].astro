@@ -1,0 +1,101 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import { siteConfig } from "../../config/site";
+
+export async function getStaticPaths() {
+  const allArticles = await getCollection("articles");
+  return allArticles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article, allArticles },
+  }));
+}
+
+const { article, allArticles } = Astro.props;
+const { title, category, metaDescription, dek, readTime, updated, sections } = article.data;
+const itemCount = sections.reduce((n, s) => n + s.items.length, 0);
+
+const seenCats = new Map();
+for (const a of allArticles) {
+  if (!seenCats.has(a.data.category)) seenCats.set(a.data.category, a.slug);
+}
+const navPairs = [...seenCats.entries()];
+
+const related = allArticles.filter((a) => a.slug !== article.slug).slice(0, 2);
+---
+<Base
+  title={`${title} | ${siteConfig.name}`}
+  description={metaDescription}
+  canonicalPath={`/articles/${article.slug}/`}
+  isArticle={true}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description: metaDescription,
+      author: { "@type": "Organization", name: siteConfig.name },
+      publisher: { "@type": "Organization", name: siteConfig.name },
+      mainEntityOfPage: `https://${siteConfig.domain}/articles/${article.slug}/`,
+    })} />
+  </Fragment>
+
+  <Fragment slot="nav">
+    {navPairs.map(([cat, slug]) => (
+      <li><a href={`/articles/${slug}/`}>{cat}</a></li>
+    ))}
+  </Fragment>
+
+  <section class="article-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="/">Home</a> / <span>{category}</span></div>
+      <span class="eyebrow">{category}</span>
+      <h1 class="article-title">{title}</h1>
+      <p class="article-dek">{dek}</p>
+      <div class="article-meta">
+        <span><strong>{itemCount}</strong> items</span>
+        <span><strong>{readTime}</strong> min read</span>
+        <span>Updated <strong>{updated}</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="article-body">
+    <div class="wrap">
+      {sections.map((section, i) => (
+        <>
+          <h2><span class="num">{String(i + 1).padStart(2, "0")}</span>{section.title}</h2>
+          <ul class="checklist">
+            {section.items.map((item) => <li>{item}</li>)}
+          </ul>
+        </>
+      ))}
+
+      <div class="print-cta">
+        <div>
+          <h3>Print this checklist</h3>
+          <p>Opens your browser's print dialog — save as PDF or print directly.</p>
+        </div>
+        <button class="btn btn-primary" data-print>Print / Save as PDF</button>
+      </div>
+    </div>
+  </section>
+
+  {related.length > 0 && (
+    <section class="related section">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Keep planning</span><h2>Related checklists</h2></div>
+        <div class="card-grid">
+          {related.map((r) => (
+            <a class="card" href={`/articles/${r.slug}/`}>
+              <span class="chip">{r.data.category}</span>
+              <h3>{r.data.title}</h3>
+              <p>{r.data.dek}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</Base>
