@@ -1,0 +1,50 @@
+---
+title: "The Ultimate Deep Cleaning Checklist"
+category: "Home & Moving"
+metaDescription: "A room-by-room deep cleaning checklist covering the kitchen, bathrooms, bedrooms, and the spots everyone forgets."
+dek: "Not your weekly tidy-up — the clean that actually resets the whole house."
+readTime: 7
+updated: "Aug 2026"
+sections:
+  - title: "Kitchen"
+    items:
+      - "Clean inside the oven and stovetop"
+      - "Empty and wipe down the refrigerator, check expired items"
+      - "Descale the coffee maker and kettle"
+      - "Wipe down cabinet fronts and handles"
+      - "Clean inside the microwave"
+      - "Degrease the range hood filter"
+      - "Scrub the sink and disinfect the drain"
+      - "Wash the trash and recycling bins"
+  - title: "Bathrooms"
+    items:
+      - "Scrub grout and tile"
+      - "Descale the showerhead and faucets"
+      - "Clean behind and under the toilet"
+      - "Wash the shower curtain or clean the glass door"
+      - "Empty and wipe down cabinets"
+      - "Replace old towels or bath mats if needed"
+      - "Clean the exhaust fan vent"
+  - title: "Bedrooms"
+    items:
+      - "Flip or rotate the mattress"
+      - "Wash pillows and comforters"
+      - "Dust ceiling fans and light fixtures"
+      - "Vacuum under the bed"
+      - "Wipe down baseboards"
+      - "Declutter one drawer or closet shelf"
+  - title: "Living Areas"
+    items:
+      - "Vacuum upholstery, including under cushions"
+      - "Dust blinds and window sills"
+      - "Wipe down light switches and door handles"
+      - "Clean inside the entertainment console"
+      - "Wash throw blankets and pillow covers"
+  - title: "Often Forgotten"
+    items:
+      - "Wipe down the washing machine and dryer lint trap"
+      - "Clean the inside of the dishwasher"
+      - "Dust the tops of door frames and cabinets"
+      - "Vacuum the mattress itself"
+      - "Wipe down remote controls and light switches"
+---
