@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://everychecklist.co/sitemap-index.xml
