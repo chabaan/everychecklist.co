@@ -1,0 +1,15 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+<rect width="800" height="500" rx="0" fill="#F5F6F0"/>
+<rect x="290" y="260" width="150" height="120" rx="10" fill="#E7F0EA" stroke="#2F6F4F" stroke-width="3"/>
+<rect x="290" y="305" width="150" height="20" fill="#FFFFFF"/>
+<rect x="350" y="260" width="30" height="120" fill="#FFFFFF"/>
+<path d="M330 260 q0 -30 -30 -30 q-25 0 -10 25 q15 20 40 5 Z" fill="#FFD23F" stroke="#1F4E38" stroke-width="2"/>
+<path d="M400 260 q0 -30 30 -30 q25 0 10 25 q-15 20 -40 5 Z" fill="#FFD23F" stroke="#1F4E38" stroke-width="2"/>
+<circle cx="560" cy="200" r="16" fill="#E7F0EA" stroke="#2F6F4F" stroke-width="2.5"/>
+<circle cx="600" cy="230" r="12" fill="#FFD23F" opacity="0.8"/>
+<circle cx="540" cy="240" r="10" fill="#E7F0EA" stroke="#2F6F4F" stroke-width="2"/>
+<rect x="150" y="150" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#2F6F4F" stroke-width="2.5"/><path d="M155 161 L159 166 L167 156" fill="none" stroke="#2F6F4F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="150" y="190" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#2F6F4F" stroke-width="2.5"/>
+<line x1="182" y1="161" x2="260" y2="161" stroke="#DBDCCF" stroke-width="2" stroke-dasharray="6 6"/>
+<line x1="182" y1="201" x2="240" y2="201" stroke="#DBDCCF" stroke-width="2" stroke-dasharray="6 6"/>
+</svg>
