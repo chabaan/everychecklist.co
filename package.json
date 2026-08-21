@@ -1,19 +1,17 @@
 {
-  "name": "coffee-site",
+  "name": "everychecklist-site",
   "type": "module",
-  "version": "0.0.1",
-  "engines": {
-    "node": ">=22.12.0"
-  },
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/generate-from-sheet.mjs && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "sync": "node scripts/generate-from-sheet.mjs"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.3",
-    "astro": "^7.2.1",
-    "papaparse": "^5.6.0"
+    "@fontsource/fraunces": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "astro": "^4.16.0"
   }
 }
